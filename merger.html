@@ -26,13 +26,14 @@
     <h2>Amogh Reddy Nalla builds a merger</h2>
     <input type="text" id="abc">
 	<div class="flex-container" id="target">
-		  <div>row item 1</div>   
-		  <div>row item 2</div>  
-		  <div>row item 3</div>  
+		  <div class="merger">row item 1</div>   
+		  <div class="merger">row item 2</div>  
+		  <div class="merger">row item 3</div>  
 		</div>
 	
 		<button onclick="addEnd()">Add end</button>
-        
+        <button onclick="rem()">Remove</button>
+        <button onclick="addFront()">addFront</button>
 	
 	
 </body>
@@ -52,6 +53,34 @@
 		
 	}
 
-   
+    function rem(){
+        console.log("hii")
+        
+       mergerItems=document.getElementsByClassName("merger")
+       console.log(typeof(mergerItems))
+       
+       let length =mergerItems.length;
+       console.log(mergerItems)
+       if(length>0)
+       {
+        mergerItems[Math.floor(length/2)].remove();
+        console.log(mergerItems)
+       }
+    
+    }
+
+    function addFront(){
+        
+		let element = document.createElement("div")
+		let val=document.getElementById("abc").value
+        element.innerHTML=val;
+		element.style.color = "darkblue"
+        element.className="merger"
+
+        let container = document.getElementById('target')
+		container.insertBefore(element,container.firstChild)
+
+    
+    }
 </script>
 </html>	
