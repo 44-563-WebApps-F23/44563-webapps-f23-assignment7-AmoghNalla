@@ -40,7 +40,8 @@
 <script>
 	function addEnd(){
 		/* make the div and its text */
-        let first=document.getElementById("target").firstElementChild.className="merger"
+        let first=document.getElementById("target")
+        first.firstElementChild.className="merger"
 		let element = document.createElement("div")
 		let val=document.getElementById("abc").value
         element.innerHTML=val;
