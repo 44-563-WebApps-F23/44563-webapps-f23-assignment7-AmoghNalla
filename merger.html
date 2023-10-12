@@ -34,6 +34,7 @@
 		<button onclick="addEnd()">Add end</button>
         <button onclick="rem()">Remove</button>
         <button onclick="addFront()">addFront</button>
+        <button onclick="swap()">Swap</button>
     <script>
 	function addEnd(){
 		/* make the div and its text */
@@ -80,6 +81,35 @@
 
     
     }
+
+    function swap(){
+        
+
+        let var1=document.getElementsByClassName("merger");
+        var size=var1.length;
+
+        if(size>=2){
+
+
+       var randnum1=Math.floor(Math.random() *size) ;
+       var randnum2=Math.floor(Math.random() *size);
+
+       while(randnum1===randnum2){
+        randnum2=Math.floor(Math.random()*length);
+       }
+
+       const par=document.getElementById('target')
+
+       const item1=mergerItems[index1]
+       const item2=mergerItems[index2]
+
+       const it1Next=item1.nextSibling
+       const it2Next=item2.nextSibling
+
+       par.insertBefore(item1,it2Next)
+       par.insertBefore(item2,it1Next)
+    }
+}
 </script>
 </body>
 </html>	
