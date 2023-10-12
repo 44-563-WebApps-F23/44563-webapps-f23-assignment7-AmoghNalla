@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Timeout file</title>
+  <title>React file</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -47,6 +47,11 @@
                 document.getElementById("target").innerHTML='Time was '+diff
                 }
             },8000)
+
+    for(let i=2;i<10;i++)
+    {
+        let t=setTimeout(()=>{},(10-i)*1000)
+    }
     
 
 }

@@ -26,14 +26,15 @@
     <h2>Amogh Reddy Nalla builds a merger</h2>
     <input type="text" id="abc">
 	<div class="flex-container" id="target">
-		  <div class="merger">row item 1</div>   
-		  <div class="merger">row item 2</div>  
+		  <div class="merger" >row item 1</div>   
+		  <div class="merger" >row item 2</div>  
 		  <div class="merger">row item 3</div>  
 		</div>
 	
 		<button onclick="addEnd()">Add end</button>
         <button onclick="rem()">Remove</button>
         <button onclick="addFront()">addFront</button>
+        <button onclick="swap()">Swap</button>
 	
 	
 </body>
@@ -82,6 +83,28 @@
 		container.insertBefore(element,container.firstChild)
 
     
+    }
+
+    function swap(){
+        
+
+        let var1=document.getElementsByClassName("merger");
+        
+        
+       var size=var1.length-1;
+       var randnum1=Math.floor(Math.random() *size) ;
+       var randnum2=Math.floor(Math.random() *size);
+       console.log("randnum1",randnum1);
+       console.log("var1",var1);
+        var val1=var1[randnum1].innerHTML;
+        var val2=var1[randnum2].innerHTML;
+        console.log("val1",val1);
+        console.log("val2",val2);
+        document.getElementsByClassName("merger")[randnum1].innerHTML=val2;
+        document.getElementsByClassName("merger")[randnum2].innerHTML=val1;
+
+        
+
     }
 </script>
 </html>	

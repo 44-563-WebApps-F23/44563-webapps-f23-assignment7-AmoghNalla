@@ -1,194 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Pirate File</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" 
-    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
 
 </head>
+
 <body>
 
 
-      <h1 style="text-align:center;">Find the treasure by Amogh Reddy Nalla</h1>
-  
-      <p >Click on the locations to search for treasure, beware the traps</p>
-      <p  id="locations">Number of locations checked is zero</p>
-      <p  id="penalty">Penalty is zero</p>
-      <p onclick="help()">Click for help</p>
-      <p id="help">Help report</p>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-1">
-            <img id="img0"  src="starting location.jpg" onclick="check(0)" alt="starting image" class="img-thumbnail">
-          </div>
-          <div class="col-sm-1">
-            <img id="img1"   src="starting location.jpg" onclick="check(1)" alt="treasure" class="img-thumbnail">
-          </div>
-          <div class="col-sm-1">
-            <img id="img2"  src="starting location.jpg" onclick="check(2)" alt="trap" class="img-thumbnail">
-          </div>
-          <div class="col-sm-1">
-            <img id="img3"   src="starting location.jpg" onclick="check(3)" alt="bones" class="img-thumbnail">
-          </div>
-          <div class="col-sm-1">
-            <img id="img4"   src="starting location.jpg" onclick="check(4)" alt="boat" class="img-thumbnail">
-          </div>
-        </div>
+  <h1 style="text-align:center;">Find the treasure by Amogh Reddy Nalla</h1>
 
-       <div class="row">
-          <div class="col-sm-1">
-            <img id="img5"  src="starting location.jpg" onclick="check(5)" alt="starting" class="img-thumbnail">
-          </div>
-          <div class="col-sm-1">
-            <img id="img6"  src="starting location.jpg" onclick="check(6)" alt="treasure" class="img-thumbnail">
-          </div>
-          <div class="col-sm-1">
-            <img id="img7"   src="starting location.jpg" onclick="check(7)" alt="trap" class="img-thumbnail">
-          </div>
-          <div class="col-sm-1">
-            <img id="img8"   src="starting location.jpg" onclick="check(8)" alt="bones" class="img-thumbnail">
-          </div>
-          <div class="col-sm-1">
-            <img id="img9"   src="starting location.jpg" onclick="check(9)" alt="boat" class="img-thumbnail">
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-sm-1">
-            <img id="img10"  src="starting location.jpg" onclick="check(10)" alt="starting" class="img-thumbnail">
-          </div>
-          <div class="col-sm-1">
-            <img id="img11" src="starting location.jpg" onclick="check(11)" alt="treasure" class="img-thumbnail">
-          </div>
-          <div class="col-sm-1">
-            <img id="img12"   src="starting location.jpg" onclick="check(12)" alt="trap" class="img-thumbnail">
-          </div>
-          <div class="col-sm-1">
-            <img id="img13"  src="starting location.jpg" onclick="check(13)" alt="bones" class="img-thumbnail">
-          </div>
-          <div class="col-sm-1">
-            <img id="img14"  src="starting location.jpg" onclick="check(14)" alt="boat" class="img-thumbnail">
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-sm-1">
-            <img id="img15"  src="starting location.jpg" onclick="check(15)" alt="starting" class="img-thumbnail">
-          </div>
-          <div class="col-sm-1">
-            <img id="img16"   src="starting location.jpg" onclick="check(16)" alt="treasure" class="img-thumbnail">
-          </div>
-          <div class="col-sm-1">
-            <img id="img17"   src="starting location.jpg" onclick="check(17)" alt="trap" class="img-thumbnail">
-          </div>
-          <div class="col-sm-1">
-            <img id="img18"   src="starting location.jpg" onclick="check(18)" alt="bones" class="img-thumbnail">
-          </div>
-          <div class="col-sm-1">
-            <img id="img19"   src="starting location.jpg" onclick="check(19)" alt="boat" class="img-thumbnail">
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-sm-1">
-            <img id="img20"  src="starting location.jpg" onclick="check(20)" alt="starting" class="img-thumbnail">
-          </div>
-          <div class="col-sm-1">
-            <img id="img21"   src="starting location.jpg" onclick="check(21)" alt="treasure" class="img-thumbnail">
-          </div>
-          <div class="col-sm-1">
-            <img id="img22"   src="starting location.jpg" onclick="check(22)" alt="trap" class="img-thumbnail">
-          </div>
-          <div class="col-sm-1">
-            <img id="img23"   src="starting location.jpg" onclick="check(23)" alt="bones" class="img-thumbnail">
-          </div>
-          <div class="col-sm-1">
-            <img id="img24"  src="starting location.jpg" onclick="check(24)" alt="boat" class="img-thumbnail">
-          </div>
-        </div>
+  <p>Click on the locations to search for treasure, beware the traps</p>
+  <p id="locations">Number of locations checked is zero</p>
+  <p id="penalty">Penalty is zero</p>
+  <p onclick="help()">Click for help</p>
+  <p id="help">Help report</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-1">
+        <img id="img0" src="starting location.jpg" onclick="check(0)" alt="starting image" class="img-thumbnail">
       </div>
-      <script>
-        let ids=[]
-        let checkCount=0,penalty=0,lastCheck=0,treasureLocation=5,trapLocation=18,gameOver=false
-        for(let i=0;i<25;i++)
-        {
-          let id='img'+i;
-          ids.push(id);
-          document.getElementById(id).onclick=function(){
-            check(i);
-          }
-        }
-        function check(position){
-          console.log("clicked position: "+position)
-          if(gameOver) return;
+      <div class="col-sm-1">
+        <img id="img1" src="starting location.jpg" onclick="check(1)" alt="treasure" class="img-thumbnail">
+      </div>
+      <div class="col-sm-1">
+        <img id="img2" src="starting location.jpg" onclick="check(2)" alt="trap" class="img-thumbnail">
+      </div>
+      <div class="col-sm-1">
+        <img id="img3" src="starting location.jpg" onclick="check(3)" alt="bones" class="img-thumbnail">
+      </div>
+      <div class="col-sm-1">
+        <img id="img4" src="starting location.jpg" onclick="check(4)" alt="boat" class="img-thumbnail">
+      </div>
+    </div>
 
-          let id=ids[position];
-          let imageElement=document.getElementById(id);
+    <div class="row">
+      <div class="col-sm-1">
+        <img id="img5" src="starting location.jpg" onclick="check(5)" alt="starting" class="img-thumbnail">
+      </div>
+      <div class="col-sm-1">
+        <img id="img6" src="starting location.jpg" onclick="check(6)" alt="treasure" class="img-thumbnail">
+      </div>
+      <div class="col-sm-1">
+        <img id="img7" src="starting location.jpg" onclick="check(7)" alt="trap" class="img-thumbnail">
+      </div>
+      <div class="col-sm-1">
+        <img id="img8" src="starting location.jpg" onclick="check(8)" alt="bones" class="img-thumbnail">
+      </div>
+      <div class="col-sm-1">
+        <img id="img9" src="starting location.jpg" onclick="check(9)" alt="boat" class="img-thumbnail">
+      </div>
+    </div>
 
-          if(position==treasureLocation)
-          {
-            imageElement.src="treasure.jpg";
-            gameOver=true
-            penalty-=3
-          }
-          else if(position==trapLocation)
-          {
-            imageElement.src="trap.jpg"
-            gameOver=true
-            penalty+=4
-          }
-          else{
-            imageElement.src="boones.jpg"
-            penalty++;
-          }
-          checkCount++;
-          document.getElementById("locations").innerHTML= "Number of locations checked is "+checkCount;
-          document.getElementById("penalty").innerHTML="Penalty is "+penalty;
-          lastCheck=position
+    <div class="row">
+      <div class="col-sm-1">
+        <img id="img10" src="starting location.jpg" onclick="check(10)" alt="starting" class="img-thumbnail">
+      </div>
+      <div class="col-sm-1">
+        <img id="img11" src="starting location.jpg" onclick="check(11)" alt="treasure" class="img-thumbnail">
+      </div>
+      <div class="col-sm-1">
+        <img id="img12" src="starting location.jpg" onclick="check(12)" alt="trap" class="img-thumbnail">
+      </div>
+      <div class="col-sm-1">
+        <img id="img13" src="starting location.jpg" onclick="check(13)" alt="bones" class="img-thumbnail">
+      </div>
+      <div class="col-sm-1">
+        <img id="img14" src="starting location.jpg" onclick="check(14)" alt="boat" class="img-thumbnail">
+      </div>
+    </div>
 
-        }
+    <div class="row">
+      <div class="col-sm-1">
+        <img id="img15" src="starting location.jpg" onclick="check(15)" alt="starting" class="img-thumbnail">
+      </div>
+      <div class="col-sm-1">
+        <img id="img16" src="starting location.jpg" onclick="check(16)" alt="treasure" class="img-thumbnail">
+      </div>
+      <div class="col-sm-1">
+        <img id="img17" src="starting location.jpg" onclick="check(17)" alt="trap" class="img-thumbnail">
+      </div>
+      <div class="col-sm-1">
+        <img id="img18" src="starting location.jpg" onclick="check(18)" alt="bones" class="img-thumbnail">
+      </div>
+      <div class="col-sm-1">
+        <img id="img19" src="starting location.jpg" onclick="check(19)" alt="boat" class="img-thumbnail">
+      </div>
+    </div>
 
-        function help(){
-          let col=lastCheck%5
-          let row=Math.floor(lastCheck/5)
-          
+    <div class="row">
+      <div class="col-sm-1">
+        <img id="img20" src="starting location.jpg" onclick="check(20)" alt="starting" class="img-thumbnail">
+      </div>
+      <div class="col-sm-1">
+        <img id="img21" src="starting location.jpg" onclick="check(21)" alt="treasure" class="img-thumbnail">
+      </div>
+      <div class="col-sm-1">
+        <img id="img22" src="starting location.jpg" onclick="check(22)" alt="trap" class="img-thumbnail">
+      </div>
+      <div class="col-sm-1">
+        <img id="img23" src="starting location.jpg" onclick="check(23)" alt="bones" class="img-thumbnail">
+      </div>
+      <div class="col-sm-1">
+        <img id="img24" src="starting location.jpg" onclick="check(24)" alt="boat" class="img-thumbnail">
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    let ids = []
+    let checkCount = 0
+    let penalty = 0
+    let lastCheck = 0
+    let treasureLocation = 5
+    let trapLocation = 18
+    let gameOver = false
+    for (let i = 0; i < 25; i++) {
+      let id = 'img' + i;
+      ids.push(id);
+      document.getElementById(id).onclick = function () {
+        check(i);
+      }
+    }
+    function check(position) {
+      console.log("clicked position: " + position)
+      if (gameOver) return;
 
-          let rowTreasure=Math.floor(treasureLocation/5)
-          let colTreasure=treasureLocation%5
+      let id = ids[position];
+      let imageElement = document.getElementById(id);
 
-          let distance=Math.abs(row-rowTreasure)+Math.abs(col-colTreasure)
-          console.log(distance)
-          if (gameOver) return;
+      if (position == treasureLocation) {
+        imageElement.src = "treasure.jpg";
+        gameOver = true
+        penalty -= 3
+      }
+      else if (position == trapLocation) {
+        imageElement.src = "trap.jpg"
+        gameOver = true
+        penalty += 4
+      }
+      else {
+        imageElement.src = "boones.jpg"
+        penalty++;
+      }
+      checkCount++;
+      document.getElementById("locations").innerHTML = "Number of locations checked is " + checkCount;
+      document.getElementById("penalty").innerHTML = "Penalty is " + penalty;
+      lastCheck = position
 
-          if(distance==1){
-            console.log(distance,"can smell it")
+    }
 
-            document.getElementById("help").innerHTML= "Can Smell it";
-          }
+    function help() {
+      let col = lastCheck % 5
+      let row = Math.floor(lastCheck / 5)
 
-          else if(distance==2){
-            console.log(distance,"Close matie")
-            document.getElementById("help").innerHTML= "Close Matie";
-          }
 
-          else{
-            console.log(distance,"step faster")
-            document.getElementById("help").innerHTML= "step faster";
-          }
-          penalty+=2;
-          document.getElementById("penalty").innerHTML="Penalty is "+penalty
-          
-          
-        
-        }
-        
-      </script>
+      let rowTreasure = Math.floor(treasureLocation / 5)
+      let colTreasure = treasureLocation % 5
+
+      let distance = Math.abs(row - rowTreasure) + Math.abs(col - colTreasure)
+      console.log(distance)
+      if (gameOver) return;
+
+      if (distance == 1) {
+        console.log(distance, "can smell it")
+
+        document.getElementById("help").innerHTML = "Can Smell it";
+      }
+
+      else if (distance == 2) {
+        console.log(distance, "Close matie")
+        document.getElementById("help").innerHTML = "Close Matie";
+      }
+
+      else {
+        console.log(distance, "step faster")
+        document.getElementById("help").innerHTML = "step faster";
+      }
+      penalty += 2;
+      document.getElementById("penalty").innerHTML = "Penalty is " + penalty
+
+
+
+    }
+
+    
+  </script>
 </body>
-</html> 
+
+</html>
