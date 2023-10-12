@@ -83,25 +83,21 @@
     }
 
     function swap(){
-        
-
         let var1=document.getElementsByClassName("merger");
         var size=var1.length;
 
         if(size>=2){
-
-
        var randnum1=Math.floor(Math.random() *size) ;
        var randnum2=Math.floor(Math.random() *size);
 
-       while(randnum1===randnum2){
-        randnum2=Math.floor(Math.random()*length);
+       while(randnum2===randnum1){
+        randnum2=Math.floor(Math.random()*size);
        }
 
        const par=document.getElementById('target')
 
-       const item1=mergerItems[index1]
-       const item2=mergerItems[index2]
+       const item1=var1[randnum1]
+       const item2=var1[randnum2]
 
        const it1Next=item1.nextSibling
        const it2Next=item2.nextSibling
